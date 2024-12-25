@@ -1,0 +1,139 @@
+{
+    "calls": {
+        "AAD": {
+            "body": "{\n  \"token\": \"<token>\"\n}",
+            "body_params": {
+                "AAJ": {
+                    "key": "token",
+                    "private": true,
+                    "visibility": "secret"
+                }
+            },
+            "doc_link": "https://apidocs.dynalist.io/#file-level-api",
+            "initialized": true,
+            "method": "post",
+            "name": "Get all documents and folders",
+            "publish_as": "data",
+            "rank": 0,
+            "ret_value": "api.1668994915597x173937061007458300.plugin_api.AAD",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAD\":{\"caption\":\"Get all documents and folder\",\"fields\":{\"_p_body._code\":{\"ret_value\":\"text\",\"caption\":\"body _code\",\"sample_value\":\"Ok\",\"path\":[\"body\",\"_code\"]},\"_p_body.root_file_id\":{\"ret_value\":\"text\",\"caption\":\"body root_file_id\",\"sample_value\":\"GD4L2usJFV-o70ytlsjVRE1P\",\"path\":[\"body\",\"root_file_id\"]},\"_p_body.files\":{\"ret_value\":\"list.api.1668994915597x173937061007458300.plugin_api.AAD.body.files\",\"caption\":\"body files\",\"path\":[\"body\",\"files\"]},\"_p_error.status_code\":{\"ret_value\":\"number\",\"caption\":\"error status_code\",\"sample_value\":200,\"path\":[\"error\",\"status_code\"]},\"_p_error.status_message\":{\"ret_value\":\"text\",\"caption\":\"error status_message\",\"sample_value\":\"OK\",\"path\":[\"error\",\"status_message\"]},\"_p_error.body\":{\"ret_value\":\"text\",\"caption\":\"error body\",\"sample_value\":\"\\\"{\\\\\\\"_code\\\\\\\":\\\\\\\"Ok\\\\\\\",\\\\\\\"root_file_id\\\\\\\":\\\\\\\"GD4L2usJFV-o70ytlsjVRE1P\\\\\\\",\\\\\\\"files\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"LZjprX2wiK8SHrxg5atlFK5s\\\\\\\",\\\\\\\"title\\\\\\\":\\\\\\\"Getting started with Dynalist\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"document\\\\\\\",\\\\\\\"permission\\\\\\\":4},{\\\\\\\"id\\\\\\\":\\\\\\\"GD4L2usJFV-o70ytlsjVRE1P\\\\\\\",\\\\\\\"title\\\\\\\":\\\\\\\"Untitled\\\\\\\",\\\\\\\"type\\\\\\\":\\\\\\\"folder\\\\\\\",\\\\\\\"permission\\\\\\\":4,\\\\\\\"collapsed\\\\\\\":false,\\\\\\\"children\\\\\\\":[\\\\\\\"LZjprX2wiK8SHrxg5atlFK5s\\\\\\\"]}]}\\\"\",\"path\":[\"error\",\"body\"]},\"_p_returned_an_error\":{\"ret_value\":\"boolean\",\"caption\":\"returned_an_error\",\"sample_value\":false,\"path\":[\"returned_an_error\"]}}},\"plugin_api.AAD.body.files\":{\"caption\":\"Get all documents and folders body file\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"LZjprX2wiK8SHrxg5atlFK5s\",\"path\":[\"id\"]},\"_p_title\":{\"ret_value\":\"text\",\"caption\":\"title\",\"sample_value\":\"Getting started with Dynalist\",\"path\":[\"title\"]},\"_p_type\":{\"ret_value\":\"text\",\"caption\":\"type\",\"sample_value\":\"document\",\"path\":[\"type\"]},\"_p_permission\":{\"ret_value\":\"number\",\"caption\":\"permission\",\"sample_value\":4,\"path\":[\"permission\"]},\"_p_collapsed\":{\"ret_value\":\"boolean\",\"caption\":\"collapsed\",\"sample_value\":false,\"path\":[\"collapsed\"]},\"_p_children\":{\"ret_value\":\"list.text\",\"caption\":\"children\",\"sample_value\":\"LZjprX2wiK8SHrxg5atlFK5s\",\"path\":[\"children\"]}}}}",
+            "url": "https://dynalist.io/api/v1/file/list",
+            "wrap_error": true
+        },
+        "AAK": {
+            "body": "{\n  \"token\": \"<token>\",\n      <changes>\n}",
+            "body_params": {
+                "AAL": {
+                    "key": "token",
+                    "private": true,
+                    "visibility": "secret"
+                },
+                "AAV": {
+                    "doc": "\"changes\": [\n    {\n      \"action\": \"edit\",\n      \"type\": \"document\",\n      \"file_id\": \"<document id>\",\n      \"title\": \"New title\"\n    },\n    {\n      \"action\": \"move\",\n      \"type\": \"folder\",\n      \"file_id\": \"<folder id>\",\n      \"parent_id\": \"<parent folder id>\",\n      \"index\": 3\n    },\n    {\n      \"action\": \"create\",\n      \"type\": \"document\",\n      \"parent_id\": \"<parent folder id>\",\n      \"index\": 3,\n      \"title\": \"New title\"\n    }\n  ]",
+                    "key": "changes",
+                    "private": true,
+                    "value": "\"changes\": [     {       \"action\": \"edit\",       \"type\": \"document\",       \"file_id\": \"LZjprX2wiK8SHrxg5atlFK5s\",       \"title\": \"New title\"     }]"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "Make changes to documents and folders",
+            "publish_as": "action",
+            "rank": 1,
+            "ret_value": "api.1668994915597x173937061007458300.plugin_api.AAK",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAK\":{\"caption\":\"Make changes to documents and folder\",\"fields\":{\"_p_body._code\":{\"ret_value\":\"text\",\"caption\":\"body _code\",\"sample_value\":\"Ok\",\"path\":[\"body\",\"_code\"]},\"_p_body.results\":{\"ret_value\":\"list.boolean\",\"caption\":\"body\",\"sample_value\":true,\"path\":[\"body\",\"results\"]},\"_p_error.status_code\":{\"ret_value\":\"number\",\"caption\":\"error status_code\",\"sample_value\":200,\"path\":[\"error\",\"status_code\"]},\"_p_error.status_message\":{\"ret_value\":\"text\",\"caption\":\"error status_message\",\"sample_value\":\"OK\",\"path\":[\"error\",\"status_message\"]},\"_p_error.body\":{\"ret_value\":\"text\",\"caption\":\"error body\",\"sample_value\":\"\\\"{\\\\\\\"_code\\\\\\\":\\\\\\\"Ok\\\\\\\",\\\\\\\"results\\\\\\\":[true],\\\\\\\"created\\\\\\\":[]}\\\"\",\"path\":[\"error\",\"body\"]},\"_p_returned_an_error\":{\"ret_value\":\"boolean\",\"caption\":\"returned_an_error\",\"sample_value\":false,\"path\":[\"returned_an_error\"]}}}}",
+            "url": "https://dynalist.io/api/v1/file/edit",
+            "wrap_error": true
+        },
+        "AAW": {
+            "body": "{\n  \"token\": \"<token>\",\n  \"file_id\": \"<document_id>\"\n}",
+            "body_params": {
+                "AAd": {
+                    "key": "token",
+                    "private": true,
+                    "visibility": "secret"
+                },
+                "AAe": {
+                    "key": "document_id",
+                    "private": true,
+                    "value": "LZjprX2wiK8SHrxg5atlFK5s"
+                }
+            },
+            "doc_link": "https://apidocs.dynalist.io/#get-content-of-a-document",
+            "initialized": true,
+            "method": "post",
+            "name": "Get content of a document",
+            "publish_as": "data",
+            "rank": 2,
+            "ret_value": "api.1668994915597x173937061007458300.plugin_api.AAW",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAW\":{\"caption\":\"Get content of a document\",\"fields\":{\"_p_body._code\":{\"ret_value\":\"text\",\"caption\":\"body _code\",\"sample_value\":\"Ok\",\"path\":[\"body\",\"_code\"]},\"_p_body.file_id\":{\"ret_value\":\"text\",\"caption\":\"body file_id\",\"sample_value\":\"LZjprX2wiK8SHrxg5atlFK5s\",\"path\":[\"body\",\"file_id\"]},\"_p_body.title\":{\"ret_value\":\"text\",\"caption\":\"body title\",\"sample_value\":\"New title\",\"path\":[\"body\",\"title\"]},\"_p_body.nodes\":{\"ret_value\":\"list.api.1668994915597x173937061007458300.plugin_api.AAW.body.nodes\",\"caption\":\"body nodes\",\"path\":[\"body\",\"nodes\"]},\"_p_body.version\":{\"ret_value\":\"number\",\"caption\":\"body version\",\"sample_value\":0,\"path\":[\"body\",\"version\"]},\"_p_error.status_code\":{\"ret_value\":\"number\",\"caption\":\"error status_code\",\"sample_value\":200,\"path\":[\"error\",\"status_code\"]},\"_p_error.status_message\":{\"ret_value\":\"text\",\"caption\":\"error status_message\",\"sample_value\":\"OK\",\"path\":[\"error\",\"status_message\"]},\"_p_error.body\":{\"ret_value\":\"text\",\"caption\":\"error body\",\"sample_value\":\"\\\"{\\\\\\\"_code\\\\\\\":\\\\\\\"Ok\\\\\\\",\\\\\\\"file_id\\\\\\\":\\\\\\\"LZjprX2wiK8SHrxg5atlFK5s\\\\\\\",\\\\\\\"title\\\\\\\":\\\\\\\"New title\\\\\\\",\\\\\\\"nodes\\\\\\\":[{\\\\\\\"id\\\\\\\":\\\\\\\"root\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"New title\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"children\\\\\\\":[\\\\\\\"Uya9OxTBu5SxuVr8KzULev8N\\\\\\\",\\\\\\\"Lqs6xlm2WPednLvI58RKVLY7\\\\\\\",\\\\\\\"Gqfdn_WM_U8HBe7hpMKfalpb\\\\\\\",\\\\\\\"e5FYTgVvZfvhxhZ0mczSceTy\\\\\\\",\\\\\\\"QIwkHKCJiURHWn0u6q7ZlYrt\\\\\\\"],\\\\\\\"created\\\\\\\":1668994841186,\\\\\\\"modified\\\\\\\":1668994841186},{\\\\\\\"id\\\\\\\":\\\\\\\"Uya9OxTBu5SxuVr8KzULev8N\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Hi there, thanks for using Dynalist! \\\\\\\\uD83D\\\\\\\\uDC4B\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"Lqs6xlm2WPednLvI58RKVLY7\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"This document contains the essentials to get you started. Keep it as a reference, and you can also add your own notes on how to use Dynalist.\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"Gqfdn_WM_U8HBe7hpMKfalpb\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"The Essentials List\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"Check things off after you have tried them\\\\\\\",\\\\\\\"checkbox\\\\\\\":true,\\\\\\\"children\\\\\\\":[\\\\\\\"Q3SIRkBvNK6sNy-zYhfbPMU3\\\\\\\",\\\\\\\"QgSmDOAwz_OIryTitDs0nXI2\\\\\\\",\\\\\\\"Z_8HVpZlsX3fOoe26UcjK2B9\\\\\\\",\\\\\\\"1PQDJY1N0EoWM7sex527l5wy\\\\\\\",\\\\\\\"TR1ntY9fEWSbDeCtJYP7qS4K\\\\\\\",\\\\\\\"ob7VActyGN3GWLu_Bk_n8Omy\\\\\\\",\\\\\\\"vESNpS3BWIIcnbw_BthN_Qbx\\\\\\\",\\\\\\\"-P0wIgAjidyoYRqMDZrHSqrB\\\\\\\",\\\\\\\"MUFKHr8r2I7kNJkmAE5ciIEq\\\\\\\",\\\\\\\"8-426YkSvuWLbDh-pHJqgX2k\\\\\\\"],\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"Q3SIRkBvNK6sNy-zYhfbPMU3\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Dynalist is all about nested lists\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"children\\\\\\\":[\\\\\\\"uqsKVyAGET-5-Q2-TnCOxgUy\\\\\\\",\\\\\\\"NFmyhzKqwAEyazl683Sb9QW0\\\\\\\"],\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"uqsKVyAGET-5-Q2-TnCOxgUy\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"`Tab` to go a level deeper \\\\\\\\uD83D\\\\\\\\uDC49\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"NFmyhzKqwAEyazl683Sb9QW0\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"And `Shift+Tab` to come back \\\\\\\\uD83D\\\\\\\\uDC48\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"QgSmDOAwz_OIryTitDs0nXI2\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"If you put your mouse on a list item, a hamburger menu icon and a \\\\\\\\uD83D\\\\\\\\uDD0D icon will show up\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"children\\\\\\\":[\\\\\\\"jukvzINirVAvM-7-J3RZieQy\\\\\\\",\\\\\\\"bMHqr2cqttzROFIiYjfCQOY-\\\\\\\"],\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"jukvzINirVAvM-7-J3RZieQy\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Click on the \\\\\\\\uD83D\\\\\\\\uDD0D to \\\\\\\\\\\\\\\"zoom in\\\\\\\\\\\\\\\" on that item\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"bMHqr2cqttzROFIiYjfCQOY-\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Click on the menu for a number of other options (this menu is called the item menu)\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"Z_8HVpZlsX3fOoe26UcjK2B9\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Convert lists to checklists by choosing \\\\\\\\\\\\\\\"Add checkbox to children\\\\\\\\\\\\\\\" in the item menu or `Ctrl+Shift+C`\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"1PQDJY1N0EoWM7sex527l5wy\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"You can sort list items by dragging their bullet points (works for multiple items too!)\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"TR1ntY9fEWSbDeCtJYP7qS4K\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"You can select multiple items as well! Simply drag the mouse to select\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"ob7VActyGN3GWLu_Bk_n8Omy\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Create a new document by clicking on the \\\\\\\\\\\\\\\"+\\\\\\\\\\\\\\\" icon in the header of the left sidebar\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"vESNpS3BWIIcnbw_BthN_Qbx\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Right click on a document for a list of things you can do with it\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"-P0wIgAjidyoYRqMDZrHSqrB\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Add a note to an item by pressing `Shift+Enter`\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"You can go back to the item using the same shortcut\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"MUFKHr8r2I7kNJkmAE5ciIEq\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Use the `!` trigger to open the date picker and add dates\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"Make sure to type it after a space\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"8-426YkSvuWLbDh-pHJqgX2k\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"(Optional) If you previously use WorkFlowy, you can import from WorkFlowy by choosing the option in the main menu in the top right corner\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"e5FYTgVvZfvhxhZ0mczSceTy\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"The Max Efficiency List\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"Check things off after you have tried them!\\\\\\\",\\\\\\\"checkbox\\\\\\\":true,\\\\\\\"children\\\\\\\":[\\\\\\\"qFbeJJFxC4GiC6s--Dphmr5v\\\\\\\",\\\\\\\"qUR2jtqHDpR-BRBXKmJm-YX1\\\\\\\",\\\\\\\"D99Xuuskk-a--edhJ8UGD9mE\\\\\\\",\\\\\\\"xixBoOdpxJiD2PMnxriId_B0\\\\\\\",\\\\\\\"BZ8C2vuX_ihpOGUgZFolhZqb\\\\\\\"],\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"qFbeJJFxC4GiC6s--Dphmr5v\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Use #tags to group things\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"qUR2jtqHDpR-BRBXKmJm-YX1\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Use `Ctrl/Cmd+O` to quickly jump between documents\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"D99Xuuskk-a--edhJ8UGD9mE\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Bookmark a place by clicking on the star, you can go back to it later very quickly in the bookmark pane\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"Access the bookmark with the shortcut `Ctrl/Cmd+Shift+B`\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"xixBoOdpxJiD2PMnxriId_B0\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"To insert a link to another item, type `[[` and start searching for items to add\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"BZ8C2vuX_ihpOGUgZFolhZqb\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"There are keyboard shortcuts for almost everything, use `Ctrl/Cmd+?` to bring up the cheatsheet!\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"QIwkHKCJiURHWn0u6q7ZlYrt\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Need help?\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"children\\\\\\\":[\\\\\\\"1_Gzwv9SvQRY1k47N2e4hjmG\\\\\\\",\\\\\\\"Zt5Y5J-2qV-XLXbSVbdy8aZB\\\\\\\"],\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"1_Gzwv9SvQRY1k47N2e4hjmG\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"Search for an answer over at [our help center](https://help.dynalist.io/)\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191},{\\\\\\\"id\\\\\\\":\\\\\\\"Zt5Y5J-2qV-XLXbSVbdy8aZB\\\\\\\",\\\\\\\"content\\\\\\\":\\\\\\\"In the main menu (the one on the top right of this page), choose Help\\\\\\\\u00A0\\\\\\\\uD83E\\\\\\\\uDC52 Contact us, we'll reply asap\\\\\\\",\\\\\\\"note\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"created\\\\\\\":1668994841191,\\\\\\\"modified\\\\\\\":1668994841191}],\\\\\\\"version\\\\\\\":0}\\\"\",\"path\":[\"error\",\"body\"]},\"_p_returned_an_error\":{\"ret_value\":\"boolean\",\"caption\":\"returned_an_error\",\"sample_value\":false,\"path\":[\"returned_an_error\"]}}},\"plugin_api.AAW.body.nodes\":{\"caption\":\"Get content of a document body node\",\"fields\":{\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"root\",\"path\":[\"id\"]},\"_p_content\":{\"ret_value\":\"text\",\"caption\":\"content\",\"sample_value\":\"New title\",\"path\":[\"content\"]},\"_p_note\":{\"ret_value\":\"text\",\"caption\":\"note\",\"sample_value\":\"\",\"path\":[\"note\"]},\"_p_children\":{\"ret_value\":\"list.text\",\"caption\":\"children\",\"sample_value\":\"Uya9OxTBu5SxuVr8KzULev8N\",\"path\":[\"children\"]},\"_p_created\":{\"ret_value\":\"number\",\"caption\":\"created\",\"sample_value\":1668994841186,\"path\":[\"created\"]},\"_p_modified\":{\"ret_value\":\"number\",\"caption\":\"modified\",\"sample_value\":1668994841186,\"path\":[\"modified\"]},\"_p_checkbox\":{\"ret_value\":\"boolean\",\"caption\":\"checkbox\",\"sample_value\":true,\"path\":[\"checkbox\"]}}}}",
+            "url": "https://dynalist.io/api/v1/doc/read",
+            "wrap_error": true
+        },
+        "AAf": {
+            "body": "{\n  \"token\": \"<token>\",\n  \"file_ids\": [\n    <Ids>\n  ]\n}",
+            "body_params": {
+                "AAq": {
+                    "doc": "\"<document_id>\", \"<document_id>\"",
+                    "key": "Ids",
+                    "private": true,
+                    "value": "\"LZjprX2wiK8SHrxg5atlFK5s\",\"_wLyFstMfzydZ90Pg9ZZQJmS\""
+                },
+                "AAr": {
+                    "key": "token",
+                    "private": true,
+                    "visibility": "secret"
+                }
+            },
+            "doc_link": "https://apidocs.dynalist.io/#check-if-documents-has-been-updated",
+            "initialized": true,
+            "method": "post",
+            "name": "Check if documents has been updated",
+            "publish_as": "action",
+            "rank": 3,
+            "ret_value": "api.1668994915597x173937061007458300.plugin_api.AAf",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAf\":{\"caption\":\"Check if documents has been updated\",\"fields\":{\"_p_body._code\":{\"ret_value\":\"text\",\"caption\":\"body _code\",\"sample_value\":\"Ok\",\"path\":[\"body\",\"_code\"]},\"_p_body.versions._wLyFstMfzydZ90Pg9ZZQJmS\":{\"ret_value\":\"number\",\"caption\":\"body versions _wLyFstMfzydZ90Pg9ZZQJmS\",\"sample_value\":0,\"path\":[\"body\",\"versions\",\"_wLyFstMfzydZ90Pg9ZZQJmS\"]},\"_p_body.versions.LZjprX2wiK8SHrxg5atlFK5s\":{\"ret_value\":\"number\",\"caption\":\"body versions LZjprX2wiK8SHrxg5atlFK5s\",\"sample_value\":1,\"path\":[\"body\",\"versions\",\"LZjprX2wiK8SHrxg5atlFK5s\"]},\"_p_error.status_code\":{\"ret_value\":\"number\",\"caption\":\"error status_code\",\"sample_value\":200,\"path\":[\"error\",\"status_code\"]},\"_p_error.status_message\":{\"ret_value\":\"text\",\"caption\":\"error status_message\",\"sample_value\":\"OK\",\"path\":[\"error\",\"status_message\"]},\"_p_error.body\":{\"ret_value\":\"text\",\"caption\":\"error body\",\"sample_value\":\"\\\"{\\\\\\\"_code\\\\\\\":\\\\\\\"Ok\\\\\\\",\\\\\\\"versions\\\\\\\":{\\\\\\\"_wLyFstMfzydZ90Pg9ZZQJmS\\\\\\\":0,\\\\\\\"LZjprX2wiK8SHrxg5atlFK5s\\\\\\\":1}}\\\"\",\"path\":[\"error\",\"body\"]},\"_p_returned_an_error\":{\"ret_value\":\"boolean\",\"caption\":\"returned_an_error\",\"sample_value\":false,\"path\":[\"returned_an_error\"]}}}}",
+            "url": "https://dynalist.io/api/v1/doc/check_for_updates",
+            "wrap_error": true
+        },
+        "AAs": {
+            "body": "\n{\n\t\"token\": \"<token>\",\n  \"file_id\": \"<file_id>\",\n  \n    <changes>\n  \n}",
+            "body_params": {
+                "AAz": {
+                    "key": "token",
+                    "private": true,
+                    "visibility": "secret"
+                },
+                "ABG": {
+                    "doc": "\"changes\": [\n    {\n      \"action\": \"insert\",\n      \"parent_id\": \"<parent node id>\",\n      \"index\": 0,\n      \"content\": \"Read the second book in the series\",\n      \"note\": \"Return the book to the library by 04/23.\"\n      \"checked\": false\n    },\n    {\n      \"action\": \"edit\",\n      \"node_id\": \"<target node id>\",\n      \"checked\": true\n    },\n    {\n      \"action\": \"move\",\n      \"node_id\": \"<target item ID>\",\n      \"parent_id\": \"<parent item ID>\",\n      \"index\": 2\n    },\n    {\n      \"action\": \"delete\",\n      \"node_id\": \"<target item ID>\"\n    }\n  ]",
+                    "key": "changes",
+                    "private": true,
+                    "value": "\"changes\": [          {       \"action\": \"insert\",       \"parent_id\": \"<parent node id>\",       \"index\": 0,       \"content\": \"Read the second book in the series\",       \"note\": \"Return the book to the library by 04/23.\"       \"checked\": false     },     {       \"action\": \"edit\",       \"node_id\": \"<target node id>\",       \"checked\": true     },          {       \"action\": \"move\",       \"node_id\": \"<target item ID>\",       \"parent_id\": \"<parent item ID>\",       \"index\": 2     },     {       \"action\": \"delete\",       \"node_id\": \"<target item ID>\"     },     {\"action\": \"edit\",\"node_id\": \"hPbKSRamkqIrI8pH94Zu_RTK\" , \"content\": \"Read the second book in the series\"} ]"
+                },
+                "ABL": {
+                    "key": "file_id",
+                    "private": true,
+                    "value": "s2wVCoptqCgWZEO25WLQwveJ"
+                }
+            },
+            "data_type": "JSON",
+            "doc_link": "https://apidocs.dynalist.io/#make-change-to-the-content-of-a-document",
+            "get_headers": false,
+            "initialized": true,
+            "method": "post",
+            "name": "Make change to the content of a document",
+            "publish_as": "action",
+            "rank": 4,
+            "ret_value": "api.1668994915597x173937061007458300.plugin_api.AAs",
+            "should_reinitialize": false,
+            "types": "{\"plugin_api.AAs\":{\"caption\":\"Make change to the content of a document\",\"fields\":{\"_p_body._code\":{\"ret_value\":\"text\",\"caption\":\"body _code\",\"sample_value\":\"Ok\",\"path\":[\"body\",\"_code\"]},\"_p_body._msg\":{\"ret_value\":\"text\",\"caption\":\"body _msg\",\"sample_value\":\"\",\"path\":[\"body\",\"_msg\"]},\"_p_body.new_node_ids\":{\"ret_value\":\"list.text\",\"caption\":\"body new_node_ids\",\"sample_value\":\"<new item ID>\",\"path\":[\"body\",\"new_node_ids\"]},\"_p_error.status_code\":{\"ret_value\":\"number\",\"caption\":\"error status_code\",\"sample_value\":200,\"path\":[\"error\",\"status_code\"]},\"_p_error.status_message\":{\"ret_value\":\"text\",\"caption\":\"error status_message\",\"sample_value\":\"OK\",\"path\":[\"error\",\"status_message\"]},\"_p_error.body\":{\"ret_value\":\"text\",\"caption\":\"error body\",\"sample_value\":\"\\\"{\\\\\\\"_code\\\\\\\":\\\\\\\"Ok\\\\\\\",\\\\\\\"new_node_ids\\\\\\\":[]}\\\"\",\"path\":[\"error\",\"body\"]},\"_p_returned_an_error\":{\"ret_value\":\"boolean\",\"caption\":\"returned_an_error\",\"sample_value\":false,\"path\":[\"returned_an_error\"]}}}}",
+            "url": "https://dynalist.io/api/v1/doc/edit",
+            "wrap_error": true
+        }
+    },
+    "human": "Dynalist API"
+}

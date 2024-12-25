@@ -1,0 +1,18 @@
+{
+    "categories": {
+        "0": "data (things)",
+        "1": "compliance",
+        "2": "technical",
+        "3": "containers",
+        "4": "productivity"
+    },
+    "data_tracked": false,
+    "demo_page": "https://clasic-plugins.bubbleapps.io/dynalist_api",
+    "description": "The best outlining app for your best work\nWhere brilliant ideas are captured, fleshed out, and realized.\n\nActions:\n- Get all documents and folders\n- Make changes to documents and folders\n- Get content of a document\n- Check if documents has been updated\n- Make change to the content of a document\n\n👛 Please support our efforts to keep this plugin free—your donations help us invest the time and resources needed to continue maintaining and improving it for everyone's benefit:  [color=#1AAFD0][url=https://zeroqo.de/support]https://zeroqo.de/support[/color][/url].\n\nTo receive special offers and important updates please visit: https://zeroqo.de/updates\n\n🔔 Get our 15 Top Plugins Bundle with 15 most popular plugins for only 20$/month.\nPlugins included in the Bundle:\n\n- Bubble Page to PDF converter\n- Stripe Marketplace Express\n- Air Calendar (Full Calendar 5.9.0)\n- AWS File uploader - Any size\n- Advanced Rich Text Editor\n- Mapbox Map\n- Phone Input Number with Formatting\n- Advanced Multi Uploader\n- Video Player\n- Dynamic Height & Width of Elements\n- Audio Recorder\n- Repeating Group to CSV\n- Print Pro\n- Advanced Audio Player\n- Easy File Downloader\n\nGet it here: https://zeroqode.com/bundle\n\nDEMO & DOCUMENTATION\nhttps://zeroqode.com/plugin/dynalist-api-plugin-for-bubble-1695288836558x508453267661817860\n\nNEED HELP BUILDING A CUSTOM APPLICATION?\nhttps://dev.zeroqode.com\n\nSUPERCHARGE YOUR APP WITH ZEROQODE PLUGINS\nhttps://zeroqode.com/plugins\n\nQUESTIONS OR NEED HELP?\nhttps://forum.zeroqode.com",
+    "image": "//s3.amazonaws.com/appforest_uf/f1668996033067x371427592901602400/unnamed%20%282%29.png",
+    "license": "open_source",
+    "link": "https://zeroqode.com/",
+    "name": "Dynalist API",
+    "plugin_instructions": "- Install the plugin into your app.\n\n- Create your Adalo APP and get API key at https://dynalist.io/developer.\n\n- Add your api key and start using the actions from the plugin.",
+    "sa_node_version": 18
+}
